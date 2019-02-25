@@ -13,9 +13,7 @@ function initializeGame() {
 // }
 // //     $('.card').on('click', card_clicked);
 // //  when we have a lot of event handlers like clicks/reset buttons
-// function handleClick(){
-    
-// }
+
 
 var first_card_clicked = null;
 var second_card_clicked = null;
@@ -24,6 +22,12 @@ var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
+// var canbeclicked = true;
+
+function handleClick(){
+    if(!canbeclicked || $(this).show();
+    return;
+}
 
 function card_clicked() {
     $(this).find('.back').hide();
@@ -31,7 +35,7 @@ function card_clicked() {
     if (first_card_clicked === null) {
         first_card_clicked = $(this).html();
         first_card_back = $(this).find('.back');
-        // return;
+        return;
     } else if (second_card_clicked === null) {
         second_card_clicked = $(this).html();
         second_card_back = $(this).find('.back');
@@ -53,6 +57,7 @@ function card_clicked() {
                 return;
             }
         } else {
+            // canbeclicked = false;
             display_stats();
             setTimeout(function () {
             $('.card').off('click', card_clicked);
@@ -87,6 +92,7 @@ function reset_stats() {
     matches = 0;
     attempts = 0;
     display_stats();
+    // canbeclicked = true;
 }
 
 function resetButton() {
