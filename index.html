@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memory Match Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="top-entire-border">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="cardimages/marvel-avengers-banner.jpg">
+            </div>
+        </div>
+
+        <div class="title-container">
+            <div class="title">
+                <center>
+                    <h1>AVENGERS: MatchGame!</h1>
+                </center>
+            </div>
+        </div>
+
+        <div class="game-menu-container">
+            <div class="game-menu">
+                <button class="menu-button"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body-container">
+        <div class="entire-stats-container">
+
+            <h1>
+                <center>STATS:</center>
+            </h1>
+
+            <div class="games_played">
+                <div class="label">Games played:</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="attempts">
+                <div class="label">Number of tries:</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="accuracy">
+                <div class="label">Accuracy:</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="game-info">
+                <a href="C:\Users\leali\Desktop\lfz\memory_match\about.html">Game Info</a>
+            </div>
+
+            <div class="reset-button">
+                <button class="reset" onclick="resetButton()">Reset Game!</button>
+            </div>
+
+        </div>
+
+        <div id="game-area">
+            <div class="card card1">
+                <div class="front"><img src="cardimages/blackpanther-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card2">
+                <div class="front"><img src="cardimages/captainamerica-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card3">
+                <div class="front"><img src="cardimages/doctorstrange-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card4">
+                <div class="front"><img src="cardimages/thor-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card5">
+                <div class="front"><img src="cardimages/gamora-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card6">
+                <div class="front"><img src="cardimages/shuri-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card7">
+                <div class="front"><img src="cardimages/hulk-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card8">
+                <div class="front"><img src="cardimages/ironman-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card9">
+                <div class="front"><img src="cardimages/doctorstrange-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card10">
+                <div class="front"><img src="cardimages/shuri-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card11">
+                <div class="front"><img src="cardimages/grootandrocket-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card12">
+                <div class="front"><img src="cardimages/ironman-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card13">
+                <div class="front"><img src="cardimages/blackpanther-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card14">
+                <div class="front"><img src="cardimages/grootandrocket-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card15">
+                <div class="front"><img src="cardimages/gamora-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card16">
+                <div class="front"><img src="cardimages/thor-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card17">
+                <div class="front"><img src="cardimages/hulk-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card18">
+                <div class="front"><img src="cardimages/captainamerica-avengers.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <!-- <div class="card card1">
+                <div class="front"><img src="cardimages/batman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card2">
+                <div class="front"><img src="cardimages/hulk.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card3">
+                <div class="front"><img src="cardimages/captainamerica.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card4">
+                <div class="front"><img src="cardimages/wonderwoman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card5">
+                <div class="front"><img src="cardimages/spiderman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card6">
+                <div class="front"><img src="cardimages/ironman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card7">
+                <div class="front"><img src="cardimages/blackpanther.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card8">
+                <div class="front"><img src="cardimages/hulk.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card9">
+                <div class="front"><img src="cardimages/robin.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card10">
+                <div class="front"><img src="cardimages/wolverine.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+            <div class="card card11">
+                <div class="front"><img src="cardimages/robin.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card12">
+                <div class="front"><img src="cardimages/captainamerica.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card13">
+                <div class="front"><img src="cardimages/batman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card14">
+                <div class="front"><img src="cardimages/wolverine.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card15">
+                <div class="front"><img src="cardimages/wonderwoman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card16">
+                <div class="front"><img src="cardimages/blackpanther.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card17">
+                <div class="front"><img src="cardimages/spiderman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div>
+
+            <div class="card card18">
+                <div class="front"><img src="cardimages/ironman.png"></div>
+                <div class="back"><img src="cardimages/avengerscardback.jpg"></div>
+            </div> -->
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
