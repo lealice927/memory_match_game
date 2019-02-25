@@ -24,10 +24,10 @@ var accuracy = 0;
 var games_played = 0;
 // var canbeclicked = true;
 
-function handleClick(){
-    if(!canbeclicked || $(this).show();
-    return;
-}
+// function handleClick(){
+//     if(!canbeclicked || $(this).show();
+//     return;
+// }
 
 function card_clicked() {
     $(this).find('.back').hide();
