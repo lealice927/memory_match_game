@@ -1,5 +1,6 @@
 html{
     font-size: 3vmin;
+    font-family: serif, sans-serif, arial;
 }
 
 body{
@@ -9,6 +10,7 @@ body{
   .top-entire-border {
     height: 20vh;
     background-color:black;
+    background-image: url('cardimages/tiled-background-header.PNG');
     display: flex;
     
   }
@@ -17,16 +19,17 @@ body{
     width: 30%;
     height: 95%;
     color: #7B6FDE;
-    margin: auto;
+    margin-left: 0%;    
   }
 
   .title-container,
   .game-menu-container {
     width: 30%;
     height: 95%;
-    border: 2px solid white;
     color: #7B6FDE;
     margin: auto;
+    justify-content: right;
+    text-align: center;
   }
   
   .main-body-container {
@@ -39,38 +42,55 @@ body{
   .entire-stats-container {
     width: 20%;
     height: 100%;
-    background-color: #1A1A64;
+    margin-left: 0.25%;
+    margin-top: 0.5%;
+    /* background-color: #1A1A64;  */
     color: #5C49C6;
+    border: 2px solid rgb(25, 183, 223); */
   }
 
-  .times-played{
+  .games_played{
     width: 75%;
     height: 10vh;
-    border: 2px solid black;
+    margin: auto;
+    /* border: 2px solid black; */
   }
 
   .attempts {
     width: 75%;
     height: 10vh;
-    border: 2px solid black;
+    margin: auto;
+    /* border: 2px solid black; */
   }
   
   .accuracy{
     width: 75%;
     height: 10vh;
-    border: 2px solid black;
+    margin: auto;
+    /* border: 2px solid black; */
   }
 
   .game-info{
     width: 75%;
     height: 10vh;
-    border: 2px solid black;
+    margin: auto;
+    /* border: 2px solid black; */
   }
 
   .reset-button{
-    width: 75%;
+    width: 80%;
     height: 10vh;
-    border: 2px solid black;   
+    margin: auto;
+    position: relative;
+    /* border: 3px solid black;    */
+  }
+  button.reset {
+    font-size: 20px;
+    background-color: #7B6FDE;
+    cursor: pointer; 
+    margin: auto;  
+    position: absolute;
+    justify-content: right;
   }
   
   #game-area {
@@ -90,6 +110,7 @@ body{
     border: 2px solid rgb(25, 183, 223);
     /* margin: auto; */
     position: relative;
+    background-size: contain;
   }
 
   .front {
