@@ -48,7 +48,6 @@ function toggleBack() {
 
 
 
-
     // function handleClick(){
     //     if(!canbeclicked || $(this).show();
     //     return;
