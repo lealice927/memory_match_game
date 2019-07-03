@@ -91,6 +91,7 @@ body{
     margin: auto;  
     position: absolute;
     justify-content: right;
+    box-shadow: 5px 5px #5C49C6 ;
   }
   
   #game-area {
@@ -133,4 +134,9 @@ body{
   .back img {
     height: 100%;
     width: 100%;
+    background-size: contain;
+  }
+
+  .back:hover {
+    cursor: pointer;
   }
