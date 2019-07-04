@@ -1,12 +1,12 @@
 
 class SharkCard {
-    constructor(randomLink, card_clicked_callback) {
-        this.randomLink = randomLink;
+    constructor(randomImageLink, cardClicked_callback) {
+        this.randomImageLink = randomImageLink;
         this.domElement = null;
-        this.card_back = null;
-        this.card_inner = null;
-        this.card_front = null;
-        this.card_clicked_callback = card_clicked_callback;
+        this.cardBack = null;   
+        this.cardInner = null;
+        this.cardFront = null;
+        this.cardClicked_callback = cardClicked_callback;
 
         this.handleClick = this.handleClick.bind(this);
     }

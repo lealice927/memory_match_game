@@ -9,13 +9,13 @@ class SharkMatchGame {
         this.secondCardClicked = null;
         this.stats = new Stats();
         this.sharkObj = {
-            '': {
-                link: '',
+            'Great White Shark': {
+                image_link: 'images/great_white_shark.jpg',
                 shark_description: '',
                 source: '',
             },
             '': {
-                link: '',
+                image_link: '',
                 shark_description: '',
                 source: '',
             },
