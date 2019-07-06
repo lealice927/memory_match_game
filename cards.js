@@ -12,25 +12,25 @@ class SharkCard {
     }
 
     handleClick() {
-        this.card_clicked_callback(this);
+        this.cardClicked_callback(this);
     }
 
 
     render() {
         var card_div = $('<div>').addClass('card');
-        this.card_inner = $('<div>').addClass('card-inner');
-        this.card_back = $('<div>').addClass('back');
-        this.card_front = $('<div>', {
+        this.cardInner = $('<div>').addClass('card-inner');
+        this.cardBack = $('<div>').addClass('back');
+        this.cardFront = $('<div>', {
             'class': 'front',
             'css': {
-                'background-image': 'url(' + this.randomLink + '),  linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)',
+                'background-image': 'url(' + this.randomImageLink + '),  linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)',
             },
         })
 
 
-        $(card_div).append(this.card_inner);
-        $(this.card_inner).append(this.card_front);
-        $(this.card_inner).append(this.card_back);
+        $(card_div).append(this.cardInner);
+        $(this.cardInner).append(this.cardFront);
+        $(this.cardInner).append(this.cardBack);
 
         this.domElement = card_div;
         return this.domElement.on('click', this.handleClick);
