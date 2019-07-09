@@ -32,9 +32,6 @@ class SharkMatchGame {
         this.clickHandlers();
     }
 
-
-
-
     clickHandlers() {
         $('.reset-button').on('click', this.resetButtonClicked);
         $('.play-again-button').on('click', this.resetButtonClicked);
@@ -44,4 +41,22 @@ class SharkMatchGame {
         $('.start-modal .fa-close').on('click', this.hideModal);
         $('.fa-question').on('click', this.openHelpModal);
     }
+
+    createCards() {
+        var photoArray = [];
+        for(var sharks in this.sharksObj) {
+          photoArray.push(this.sharksObj[sharks], this.sharksObj[sharks]);
+        }
+    
+        var photosLength = photoArray.length;
+        for(var i = 0; i<photosLength; i++) {
+          var randomPick = Math.floor(Math.random() * photoArray.length);
+    
+          var card = new SharkCard(photoArray[randomPick].link, this.cardClicked);
+          this.cards.push(card);
+          photoArray.splice(randomPick, 1);
+          $('.game-area').append(card.render());
+        }
+    
+      }
 }
