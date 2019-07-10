@@ -19,7 +19,7 @@ class SharkMatchGame {
                 shark_description: '',
                 source: '',
             },
-           
+
         }
 
         this.cardClicked = this.cardClicked.bind(this);
@@ -44,19 +44,43 @@ class SharkMatchGame {
 
     createCards() {
         var photoArray = [];
-        for(var sharks in this.sharksObj) {
-          photoArray.push(this.sharksObj[sharks], this.sharksObj[sharks]);
+        for (var sharks in this.sharksObj) {
+            photoArray.push(this.sharksObj[sharks], this.sharksObj[sharks]);
         }
-    
+
         var photosLength = photoArray.length;
-        for(var i = 0; i<photosLength; i++) {
-          var randomPick = Math.floor(Math.random() * photoArray.length);
-    
-          var card = new SharkCard(photoArray[randomPick].link, this.cardClicked);
-          this.cards.push(card);
-          photoArray.splice(randomPick, 1);
-          $('.game-area').append(card.render());
+        for (var i = 0; i < photosLength; i++) {
+            var randomPick = Math.floor(Math.random() * photoArray.length);
+
+            var card = new SharkCard(photoArray[randomPick].link, this.cardClicked);
+            this.cards.push(card);
+            photoArray.splice(randomPick, 1);
+            $('.game-area').append(card.render());
         }
-    
-      }
+    }
+
+    cardClicked(card) {
+        if (!this.waitForTimeout && $(card.cardInner).children().length === 2) {
+            $(card.cardInner).addClass('card-flip');
+
+            //ASSIGN FIRST CARD CLICKED
+            if (this.firstCardClicked === null) {
+                this.firstCardClicked = card;
+            }
+
+            //ASSIGN SECOND CARD CLICKED
+            else if ($(this.firstCardClicked.domElement).index() !== $(card.domElement).index()) {
+                this.secondCardClicked = card;
+                this.stats.attempts++;
+
+                //CHECK IF THE CARDS ARE THE SAME
+                if (this.firstCardClicked.randomImageLink === this.secondCardClicked.randomImageLink) {
+                    this.cardsMatch();
+                } else {
+                    this.notAMatch();
+                }
+            }
+            this.stats.display_stats();
+        }
+    }
 }
