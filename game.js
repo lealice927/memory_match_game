@@ -62,25 +62,40 @@ class SharkMatchGame {
     cardClicked(card) {
         if (!this.waitForTimeout && $(card.cardInner).children().length === 2) {
             $(card.cardInner).addClass('card-flip');
-
-            //ASSIGN FIRST CARD CLICKED
+            //////////SELECT FIRST CARD CLICKED//////////
             if (this.firstCardClicked === null) {
                 this.firstCardClicked = card;
             }
 
-            //ASSIGN SECOND CARD CLICKED
+            //////////SELECT SECOND CARD CLICKED//////////
             else if ($(this.firstCardClicked.domElement).index() !== $(card.domElement).index()) {
                 this.secondCardClicked = card;
                 this.stats.attempts++;
 
-                //CHECK IF THE CARDS ARE THE SAME
+                //////////CHECK MATCHED CARDS//////////
                 if (this.firstCardClicked.randomImageLink === this.secondCardClicked.randomImageLink) {
                     this.cardsMatch();
                 } else {
-                    this.notAMatch();
+                    this.cardsDoNotMatch();
                 }
             }
             this.stats.display_stats();
         }
     }
+
+    
+  cardsMatch() {
+    this.stats.matches++;
+    this.stats.accuracy = (this.stats.matches/this.stats.attempts*100).toFixed(2) + '%';
+
+    $(this.firstCardClicked.cardBack).remove();
+    $(this.secondCardClicked.cardBack).remove();
+
+    this.stats.addDescription( this.sharkObj, this.secondCardClicked);
+
+    this.firstCardClicked = null;
+    this.secondCardClicked = null;
+
+    this.checkIfWon();
+  }
 }
