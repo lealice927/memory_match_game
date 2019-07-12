@@ -96,6 +96,20 @@ class SharkMatchGame {
     this.firstCardClicked = null;
     this.secondCardClicked = null;
 
-    this.checkIfWon();
+    this.winConditionCheck();
   }
+
+  winConditionCheck() {
+
+    if(this.stats.matches === this.totalPossibleMatches) {
+
+      if(this.stats.accuracy > this.stats.highest_accuracy || this.stats.highest_accuracy===0) {
+        localStorage.highest_accuracy =  JSON.stringify(this.stats.accuracy)
+      }
+      this.show_modal();
+    }
+  }
+
+
+
 }
