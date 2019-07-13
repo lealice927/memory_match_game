@@ -119,8 +119,20 @@ class SharkMatchGame {
             this.firstCardClicked = null;
             this.secondCardClicked = null;
             this.waitForTimeout = false;
-        }.bind(this), 1000);
+        }
+        .bind(this), 1000);
     }
 
+    resetButtonClicked() {
+        this.waitForTimeout = false;
+        this.firstCardClicked = null;
+        this.stats.resetDescriptionBox();
+        this.stats.reset_stats();
+        for (var i = 0; i < this.cards.length; i++) {
+            $(this.cards[i].domElement).remove();
+        }
+        this.cards = [];
+        this.createCards();
+    }
 
 }
