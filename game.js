@@ -83,33 +83,44 @@ class SharkMatchGame {
         }
     }
 
-    
-  cardsMatch() {
-    this.stats.matches++;
-    this.stats.accuracy = (this.stats.matches/this.stats.attempts*100).toFixed(2) + '%';
 
-    $(this.firstCardClicked.cardBack).remove();
-    $(this.secondCardClicked.cardBack).remove();
+    cardsMatch() {
+        this.stats.matches++;
+        this.stats.accuracy = (this.stats.matches / this.stats.attempts * 100).toFixed(2) + '%';
 
-    this.stats.addDescription( this.sharkObj, this.secondCardClicked);
+        $(this.firstCardClicked.cardBack).remove();
+        $(this.secondCardClicked.cardBack).remove();
 
-    this.firstCardClicked = null;
-    this.secondCardClicked = null;
+        this.stats.addDescription(this.sharkObj, this.secondCardClicked);
 
-    this.winConditionCheck();
-  }
+        this.firstCardClicked = null;
+        this.secondCardClicked = null;
 
-  winConditionCheck() {
-
-    if(this.stats.matches === this.totalPossibleMatches) {
-
-      if(this.stats.accuracy > this.stats.highest_accuracy || this.stats.highest_accuracy===0) {
-        localStorage.highest_accuracy =  JSON.stringify(this.stats.accuracy)
-      }
-      this.show_modal();
+        this.winConditionCheck();
     }
-  }
 
+    winConditionCheck() {
+
+        if (this.stats.matches === this.totalPossibleMatches) {
+
+            if (this.stats.accuracy > this.stats.highest_accuracy || this.stats.highest_accuracy === 0) {
+                localStorage.highest_accuracy = JSON.stringify(this.stats.accuracy)
+            }
+            this.show_modal();
+        }
+    }
+
+    cardsNotAMatch() {
+        this.stats.accuracy = (this.stats.matches / this.stats.attempts * 100).toFixed(2) + '%';
+        this.waitForTimeout = true;
+        setTimeout(function () {
+            $(this.firstCardClicked.cardInner).removeClass('card-flip');
+            $(this.secondCardClicked.cardInner).removeClass('card-flip');
+            this.firstCardClicked = null;
+            this.secondCardClicked = null;
+            this.waitForTimeout = false;
+        }.bind(this), 1000);
+    }
 
 
 }
