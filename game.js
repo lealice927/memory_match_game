@@ -10,7 +10,7 @@ class SharkMatchGame {
         this.stats = new Stats();
         this.sharkObj = {
             'Great White Shark': {
-                image_link: 'images/great_white_shark.jpg',
+                image_link: 'images/great_white_shark.png',
                 shark_description: '',
                 source: '',
             },
@@ -79,7 +79,7 @@ class SharkMatchGame {
                     this.cardsDoNotMatch();
                 }
             }
-            this.stats.display_stats();
+            this.stats.displayStats();
         }
     }
 
@@ -103,10 +103,10 @@ class SharkMatchGame {
 
         if (this.stats.matches === this.totalPossibleMatches) {
 
-            if (this.stats.accuracy > this.stats.highest_accuracy || this.stats.highest_accuracy === 0) {
-                localStorage.highest_accuracy = JSON.stringify(this.stats.accuracy)
+            if (this.stats.accuracy > this.stats.highestAccuracy || this.stats.highestAccuracy === 0) {
+                localStorage.highestAccuracy = JSON.stringify(this.stats.accuracy)
             }
-            this.show_modal();
+            this.showModal();
         }
     }
 
@@ -127,7 +127,7 @@ class SharkMatchGame {
         this.waitForTimeout = false;
         this.firstCardClicked = null;
         this.stats.resetDescriptionBox();
-        this.stats.reset_stats();
+        this.stats.resetStats();
         for (var i = 0; i < this.cards.length; i++) {
             $(this.cards[i].domElement).remove();
         }
