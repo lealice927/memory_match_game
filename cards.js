@@ -1,6 +1,6 @@
 
 class SharkCard {
-    constructor(randomImageLink, cardClicked_callback) {
+    constructor(randomImageLink, cardClickedCallback) {
         this.randomImageLink = randomImageLink;
         this.domElement = null;
         this.cardBack = null;   
