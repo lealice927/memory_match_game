@@ -15,4 +15,18 @@ class Stats {
         $('.description .fun-fact').text(' ');
       }
 
+      addDescription( sharksObj, secondCardClicked ) {
+        $('.description .label').text('')
+        var currentImagePath = $(secondCardClicked.cardFront).css('background-image');
+        var firstIndex = currentImagePath.indexOf('image');
+        var lastIndex = currentImagePath.lastIndexOf('\")');
+        var currentImage = currentImagePath.slice(firstIndex, lastIndex);
+    
+        for(var sharks in sharksObj) {
+          if(currentImage === sharksObj[shark].link) {
+            $('.description .fun-fact').text(sharksObj[sharks].sharks_description);
+            $('.description .value').text(sharks);
+          }
+        }
+      }
 }
