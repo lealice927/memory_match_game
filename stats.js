@@ -32,13 +32,19 @@ class Stats {
 
     displayStats() {
         $('.attempts .value').text(this.attempts);
-    
-        if(this.accuracy === 'NaN%') {
-          this.accuracy = '0.00%';
+
+        if (this.accuracy === 'NaN%') {
+            this.accuracy = '0.00%';
         }
         $('.accuracy .value').text(this.accuracy);
-      }
+    }
 
+    resetStats() {
+        this.accuracy = 0;
+        this.attempts = 0;
+        this.matches = 0;
+        this.displayStats();
+    }
 
 
 
