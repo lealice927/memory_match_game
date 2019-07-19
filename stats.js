@@ -46,6 +46,10 @@ class Stats {
         this.displayStats();
     }
 
-
+    setNewHighScore() {
+        if (localStorage.highestAccuracy !== undefined || this.highestAccuracy !== 0) {
+            this.highestAccuracy = JSON.parse(localStorage.highestAccuracy);
+        }
+    }
 
 }
