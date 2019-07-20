@@ -11,7 +11,7 @@ class SharkMatchGame {
         this.sharksObj = {
             'Great White Shark': {
                 image_link: 'images/great_white_shark.png',
-                sharks_description: '',
+                sharks_description: 'The largest predatory fish in the world – capable of eating marine mammals that weight several hundred pounds – is the great white shark. The only two fishes that grow larger than Great Whites are the whale shark and the basking shark, both filter feeders that eat plankton.',
                 source: '',
             },
             '': {
