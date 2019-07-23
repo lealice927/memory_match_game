@@ -12,13 +12,20 @@ class SharkMatchGame {
             'Great White Shark': {
                 image_link: 'images/great_white_shark.png',
                 sharks_description: 'The largest predatory fish in the world – capable of eating marine mammals that weight several hundred pounds – is the great white shark. The only two fishes that grow larger than Great Whites are the whale shark and the basking shark, both filter feeders that eat plankton.',
+            },
+            'Great Hammerhead Shark': {
+                image_link: 'images/hammerhead_shark.png',
+                sharks_description: 'Great hammerhead sharks are apex predators and can be found worldwide in coastal, warm waters that are 68 degrees (20 degrees Celsius) or higher. Unlike scalloped hammerhead sharks, great hammerhead sharks are solitary and migrate long distances upward of 756 miles (1,200 km) alone.',
                 source: '',
             },
-            '': {
-                image_link: '',
-                sharks_description: '',
-                source: '',
-            },
+            'Bull Shark': {
+                image_link: 'bull_shark.png',
+                sharks_description: 'The bull shark is a predatory species that lives in coastal seas and is the shark with the best ability to move into freshwaters – particularly large, coastal rivers and lakes. They are able to move back and forth between saltwater and freshwater with ease. This behavior brings them into more contact with humans than most species of sharks, and they are therefore responsible for fatally biting more people than any other species.', 
+            }, 
+            'Tiger Shark': {
+                image_link: 'tiger_shark.png',
+                sharks_description: 'The tiger shark gets its name from the characteristic vertical bars that cover the sides of its body. Though these bars fade slightly as individuals reach adulthood, they are very noticeable in juveniles and at least party visible throughout the lifetime. Reaching lengths of at least 18 feet (5.5 m) and 2000 pounds (nearly a metric tonne), the tiger shark is the fourth largest shark and second largest predatory shark, behind only the great white.', 
+            }
 
         }
 
