@@ -96,7 +96,7 @@ body {
 }
 
 .modal-content {
-    background-image: url('images/aquatic_leech.jpg'), linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    background-image: url('images/background.jpg'), linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
@@ -324,7 +324,7 @@ body {
 }
 
 
-.start-modal .card-inner {
+.start-modal .cardInner {
     position: relative;
     width: 100%;
     height: 100%;
