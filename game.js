@@ -25,8 +25,15 @@ class SharkMatchGame {
             'Tiger Shark': {
                 image_link: 'tiger_shark.png',
                 sharks_description: 'The tiger shark gets its name from the characteristic vertical bars that cover the sides of its body. Though these bars fade slightly as individuals reach adulthood, they are very noticeable in juveniles and at least party visible throughout the lifetime. Reaching lengths of at least 18 feet (5.5 m) and 2000 pounds (nearly a metric tonne), the tiger shark is the fourth largest shark and second largest predatory shark, behind only the great white.', 
-            }
-
+            },
+            'Blue Shark': {
+                image_link: 'images/blue_shark.png',
+                sharks_description: 'Blue sharks are curious, open-ocean predators that live throughout the global ocean, from the tropics to cold temperate waters. They spend most of their lives far from the coast and are truly a pelagic species. The common name comes from the blue color of the skin, unique among the sharks.', 
+            },
+            'Mako Shark': {
+                image_link: 'images/mako_shark.png', 
+                sharks_description: 'The shortfin mako shark is a large, predatory shark that lives in the open ocean and reaches lengths of 12 feet (3.8 m) and weights of at least 1200 pounds (545 kg). With top speeds of 45 miles per hour (74 kilometers per hour), the shortfin mako is the fastest shark and is one of the fastest fishes on the planet. This species’ athleticism is not restricted to its swimming speeds. It is known for its incredible leaping ability and can be observed jumping to extreme heights (out of the water) when hunting.',
+            },
         }
 
         this.cardClicked = this.cardClicked.bind(this);
@@ -141,5 +148,15 @@ class SharkMatchGame {
         this.cards = [];
         this.createCards();
     }
+
+//////////DISPLAY GAME//////////
+displayGame() {
+    $('.start-modal').fadeIn();
+  }
+
+  closeGameModal() {
+    $('.start-modal').css('display', 'none');
+    this.resetButtonClicked();
+  }
 
 }
