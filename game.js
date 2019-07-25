@@ -20,18 +20,18 @@ class SharkMatchGame {
             },
             'Bull Shark': {
                 image_link: 'bull_shark.png',
-                sharks_description: 'The bull shark is a predatory species that lives in coastal seas and is the shark with the best ability to move into freshwaters – particularly large, coastal rivers and lakes. They are able to move back and forth between saltwater and freshwater with ease. This behavior brings them into more contact with humans than most species of sharks, and they are therefore responsible for fatally biting more people than any other species.', 
-            }, 
+                sharks_description: 'The bull shark is a predatory species that lives in coastal seas and is the shark with the best ability to move into freshwaters – particularly large, coastal rivers and lakes. They are able to move back and forth between saltwater and freshwater with ease. This behavior brings them into more contact with humans than most species of sharks, and they are therefore responsible for fatally biting more people than any other species.',
+            },
             'Tiger Shark': {
                 image_link: 'tiger_shark.png',
-                sharks_description: 'The tiger shark gets its name from the characteristic vertical bars that cover the sides of its body. Though these bars fade slightly as individuals reach adulthood, they are very noticeable in juveniles and at least party visible throughout the lifetime. Reaching lengths of at least 18 feet (5.5 m) and 2000 pounds (nearly a metric tonne), the tiger shark is the fourth largest shark and second largest predatory shark, behind only the great white.', 
+                sharks_description: 'The tiger shark gets its name from the characteristic vertical bars that cover the sides of its body. Though these bars fade slightly as individuals reach adulthood, they are very noticeable in juveniles and at least party visible throughout the lifetime. Reaching lengths of at least 18 feet (5.5 m) and 2000 pounds (nearly a metric tonne), the tiger shark is the fourth largest shark and second largest predatory shark, behind only the great white.',
             },
             'Blue Shark': {
                 image_link: 'images/blue_shark.png',
-                sharks_description: 'Blue sharks are curious, open-ocean predators that live throughout the global ocean, from the tropics to cold temperate waters. They spend most of their lives far from the coast and are truly a pelagic species. The common name comes from the blue color of the skin, unique among the sharks.', 
+                sharks_description: 'Blue sharks are curious, open-ocean predators that live throughout the global ocean, from the tropics to cold temperate waters. They spend most of their lives far from the coast and are truly a pelagic species. The common name comes from the blue color of the skin, unique among the sharks.',
             },
             'Mako Shark': {
-                image_link: 'images/mako_shark.png', 
+                image_link: 'images/mako_shark.png',
                 sharks_description: 'The shortfin mako shark is a large, predatory shark that lives in the open ocean and reaches lengths of 12 feet (3.8 m) and weights of at least 1200 pounds (545 kg). With top speeds of 45 miles per hour (74 kilometers per hour), the shortfin mako is the fastest shark and is one of the fastest fishes on the planet. This species’ athleticism is not restricted to its swimming speeds. It is known for its incredible leaping ability and can be observed jumping to extreme heights (out of the water) when hunting.',
             },
         }
@@ -66,7 +66,7 @@ class SharkMatchGame {
         for (var i = 0; i < photosLength; i++) {
             var randomPick = Math.floor(Math.random() * photoArray.length);
 
-            var card = new SharkCard(photoArray[randomPick].link, this.cardClicked);
+            var card = new SharkCard(photoArray[randomPick].image_link, this.cardClicked);
             this.cards.push(card);
             photoArray.splice(randomPick, 1);
             $('.game-area').append(card.render());
@@ -134,7 +134,7 @@ class SharkMatchGame {
             this.secondCardClicked = null;
             this.waitForTimeout = false;
         }
-        .bind(this), 1000);
+            .bind(this), 1000);
     }
 
     resetButtonClicked() {
@@ -149,14 +149,40 @@ class SharkMatchGame {
         this.createCards();
     }
 
-//////////DISPLAY GAME//////////
-displayGame() {
-    $('.start-modal').fadeIn();
-  }
+    //////////DISPLAY GAME//////////
+    displayGame() {
+        $('.start-modal').fadeIn();
+    }
 
-  closeGameModal() {
-    $('.start-modal').css('display', 'none');
-    this.resetButtonClicked();
-  }
+    closeGameModal() {
+        $('.start-modal').css('display', 'none');
+        this.resetButtonClicked();
+    }
 
+
+    //////////DISPLAY AND HIDE GAME OVER MODAL///////////
+    showModal() {
+        this.stats.setNewHighScore();
+        $('.attempts-after-win').text('You had ' + this.stats.attempts + ' attempts');
+        $('.accuracy-after-win').text('Your accuracy was ' + this.stats.accuracy);
+
+        if (this.stats.accuracy < this.stats.highestAccuracy) {
+            $('.highest-accuracy-after-win').text('Your highest accuracy in a win is ' + this.stats.highestAccuracy);
+        } else {
+            $('.highest-accuracy-after-win').text('Your accuracy of ' + this.stats.accuracy + ' is a new personal best! Good job!')
+        }
+        setTimeout(function () {
+            $('.win-modal').show()
+        }, 1200);
+    }
+
+    hideModal() {
+        if ($('.win-modal').css('display') !== 'none') {
+            $('.win-modal').hide();
+        } else if ($('.help-modal').css('display') !== 'none') {
+            $('.help-modal').hide();
+        } else {
+            this.closeGameModal();
+        }
+    }
 }
