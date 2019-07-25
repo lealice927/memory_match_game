@@ -185,4 +185,11 @@ class SharkMatchGame {
             this.closeGameModal();
         }
     }
+
+    //////////DISPLAY HELP MODAL//////////
+    openHelpModal() {
+        $('.help-modal').fadeIn();
+    }
+
+
 }
