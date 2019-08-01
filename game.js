@@ -34,6 +34,10 @@ class SharkMatchGame {
                 image_link: 'images/mako_shark.png',
                 sharks_description: 'The shortfin mako shark is a large, predatory shark that lives in the open ocean and reaches lengths of 12 feet (3.8 m) and weights of at least 1200 pounds (545 kg). With top speeds of 45 miles per hour (74 kilometers per hour), the shortfin mako is the fastest shark and is one of the fastest fishes on the planet. This species’ athleticism is not restricted to its swimming speeds. It is known for its incredible leaping ability and can be observed jumping to extreme heights (out of the water) when hunting.',
             },
+            'Thresher Shark': {
+                image_link: 'images/thresher_shark2.jpg',
+                sharks_description: '', 
+            },
         }
 
         this.cardClicked = this.cardClicked.bind(this);
