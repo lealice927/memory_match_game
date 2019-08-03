@@ -36,7 +36,11 @@ class SharkMatchGame {
             },
             'Thresher Shark': {
                 image_link: 'images/thresher_shark2.jpg',
-                sharks_description: '', 
+                sharks_description: 'These sharks are easily recognized by the long upper lobe of the caudal fin (top half of the tail), which they use to stun their prey, usually smaller schooling fish. They are fast swimmers that will sometimes leap out of the water. Because they have small mouths and teeth, and are quite timid, they are considered mostly harmless to humans.',
+            },
+            '': {
+                image_link: '',
+                sharks_description: '',
             },
         }
 
@@ -203,6 +207,6 @@ class SharkMatchGame {
         $('.play-button').on('click', this.displayGame);
         $('.start-modal .fa-close').on('click', this.hideModal);
         $('.fa-question').on('click', this.openHelpModal);
-      }
+    }
 
 }
