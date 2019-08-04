@@ -38,9 +38,9 @@ class SharkMatchGame {
                 image_link: 'images/thresher_shark2.jpg',
                 sharks_description: 'These sharks are easily recognized by the long upper lobe of the caudal fin (top half of the tail), which they use to stun their prey, usually smaller schooling fish. They are fast swimmers that will sometimes leap out of the water. Because they have small mouths and teeth, and are quite timid, they are considered mostly harmless to humans.',
             },
-            '': {
-                image_link: '',
-                sharks_description: '',
+            'Whale Shark': {
+                image_link: 'images/whale_shark2.jpg',
+                sharks_description: 'The largest fish in the world is the graceful, harmless whale shark. Though they reach the size of a school bus, whale sharks eat tiny plankton and fish eggs, which they filter feed as they swim slowly along with their giant mouths wide open. They are one of only three species of filter feeding sharks.',
             },
         }
 
