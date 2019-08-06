@@ -19,11 +19,11 @@ class SharkMatchGame {
                 source: '',
             },
             'Bull Shark': {
-                image_link: 'bull_shark.png',
+                image_link: 'images/bull_shark.png',
                 sharks_description: 'The bull shark is a predatory species that lives in coastal seas and is the shark with the best ability to move into freshwaters – particularly large, coastal rivers and lakes. They are able to move back and forth between saltwater and freshwater with ease. This behavior brings them into more contact with humans than most species of sharks, and they are therefore responsible for fatally biting more people than any other species.',
             },
             'Tiger Shark': {
-                image_link: 'tiger_shark.png',
+                image_link: 'images/tiger_shark.png',
                 sharks_description: 'The tiger shark gets its name from the characteristic vertical bars that cover the sides of its body. Though these bars fade slightly as individuals reach adulthood, they are very noticeable in juveniles and at least party visible throughout the lifetime. Reaching lengths of at least 18 feet (5.5 m) and 2000 pounds (nearly a metric tonne), the tiger shark is the fourth largest shark and second largest predatory shark, behind only the great white.',
             },
             'Blue Shark': {
@@ -132,7 +132,7 @@ class SharkMatchGame {
         }
     }
 
-    cardsNotAMatch() {
+    cardsDoNotMatch() {
         this.stats.accuracy = (this.stats.matches / this.stats.attempts * 100).toFixed(2) + '%';
         this.waitForTimeout = true;
         setTimeout(function () {
