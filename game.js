@@ -113,7 +113,7 @@ class SharkMatchGame {
         $(this.firstCardClicked.cardBack).remove();
         $(this.secondCardClicked.cardBack).remove();
 
-        this.stats.addDescription(this.sharkObj, this.secondCardClicked);
+        this.stats.addDescription(this.sharksObj, this.secondCardClicked);
 
         this.firstCardClicked = null;
         this.secondCardClicked = null;
@@ -124,7 +124,6 @@ class SharkMatchGame {
     winConditionCheck() {
 
         if (this.stats.matches === this.totalPossibleMatches) {
-
             if (this.stats.accuracy > this.stats.highestAccuracy || this.stats.highestAccuracy === 0) {
                 localStorage.highestAccuracy = JSON.stringify(this.stats.accuracy)
             }
