@@ -24,7 +24,7 @@ class Stats {
 
         for (var sharks in sharksObj) {
             if (currentImage === sharksObj[sharks].image_link) {
-                $('.description .fun-fact').text(sharksObj[sharks].description);
+                $('.description .fun-fact').text(sharksObj[sharks].sharks_description);
                 $('.description .value').text(sharks);
             }
         }
