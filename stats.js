@@ -23,8 +23,8 @@ class Stats {
         var currentImage = currentImagePath.slice(firstIndex, lastIndex);
 
         for (var sharks in sharksObj) {
-            if (currentImage === sharksObj[shark].link) {
-                $('.description .fun-fact').text(sharksObj[sharks].sharks_description);
+            if (currentImage === sharksObj[sharks].image_link) {
+                $('.description .fun-fact').text(sharksObj[sharks].description);
                 $('.description .value').text(sharks);
             }
         }
