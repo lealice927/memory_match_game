@@ -10,37 +10,37 @@ class SharkMatchGame {
         this.stats = new Stats();
         this.sharksObj = {
             'Great White Shark': {
-                image_link: 'images/great_white_shark.png',
+                image_link: 'images/great_white_shark2.jpg',
                 sharks_description: 'The largest predatory fish in the world – capable of eating marine mammals that weight several hundred pounds – is the great white shark. The only two fishes that grow larger than Great Whites are the whale shark and the basking shark, both filter feeders that eat plankton.',
             },
             'Great Hammerhead Shark': {
-                image_link: 'images/hammerhead_shark.png',
-                sharks_description: 'Great hammerhead sharks are apex predators and can be found worldwide in coastal, warm waters that are 68 degrees (20 degrees Celsius) or higher. Unlike scalloped hammerhead sharks, great hammerhead sharks are solitary and migrate long distances upward of 756 miles (1,200 km) alone.',
+                image_link: 'images/hammerhead_shark2.jpg',
+                sharks_description: 'Hammerheads are aggressive hunters, feeding on smaller fish, octopuses, squid, and crustaceans. They do not actively seek out human prey, but are very defensive and will attack when provoked.',
                 source: '',
             },
             'Bull Shark': {
-                image_link: 'images/bull_shark.png',
+                image_link: 'images/bull_shark.jpg',
                 sharks_description: 'The bull shark is a predatory species that lives in coastal seas and is the shark with the best ability to move into freshwaters – particularly large, coastal rivers and lakes. They are able to move back and forth between saltwater and freshwater with ease. This behavior brings them into more contact with humans than most species of sharks, and they are therefore responsible for fatally biting more people than any other species.',
             },
             'Tiger Shark': {
-                image_link: 'images/tiger_shark.png',
-                sharks_description: 'The tiger shark gets its name from the characteristic vertical bars that cover the sides of its body. Though these bars fade slightly as individuals reach adulthood, they are very noticeable in juveniles and at least party visible throughout the lifetime. Reaching lengths of at least 18 feet (5.5 m) and 2000 pounds (nearly a metric tonne), the tiger shark is the fourth largest shark and second largest predatory shark, behind only the great white.',
+                image_link: 'images/tiger_shark2.jpg',
+                sharks_description: 'So called because of the tiger-like stripes on juveniles, the tiger shark is, like its terrestrial namesake, a voracious hunter.',
             },
             'Blue Shark': {
-                image_link: 'images/blue_shark.png',
+                image_link: 'images/blue_shark.jpg',
                 sharks_description: 'Blue sharks are curious, open-ocean predators that live throughout the global ocean, from the tropics to cold temperate waters. They spend most of their lives far from the coast and are truly a pelagic species. The common name comes from the blue color of the skin, unique among the sharks.',
             },
-            'Mako Shark': {
-                image_link: 'images/mako_shark.png',
-                sharks_description: 'The shortfin mako shark is a large, predatory shark that lives in the open ocean and reaches lengths of 12 feet (3.8 m) and weights of at least 1200 pounds (545 kg). With top speeds of 45 miles per hour (74 kilometers per hour), the shortfin mako is the fastest shark and is one of the fastest fishes on the planet. This species’ athleticism is not restricted to its swimming speeds. It is known for its incredible leaping ability and can be observed jumping to extreme heights (out of the water) when hunting.',
+            'Shortfin Mako Shark': {
+                image_link: 'images/shortfin_mako_shark.jpg',
+                sharks_description: 'The shortfin mako shark, also known as the blue pointer or bonito shark, is a large mackerel shark. It is commonly referred to as the mako shark, as is the longfin mako shark. The shortfin mako is on record as the fastest-swimming shark, capable of bursts of speed up to 18.8 metres per second.',
             },
             'Thresher Shark': {
-                image_link: 'images/thresher_shark2.jpg',
-                sharks_description: 'These sharks are easily recognized by the long upper lobe of the caudal fin (top half of the tail), which they use to stun their prey, usually smaller schooling fish. They are fast swimmers that will sometimes leap out of the water. Because they have small mouths and teeth, and are quite timid, they are considered mostly harmless to humans.',
+                image_link: 'images/thresher_shark.jpg',
+                sharks_description: 'For most sharks, the front end is the dangerous bit. Thresher sharks are the exception. They’re deadly at both ends, because they’ve managed to weaponise their tails.',
             },
-            'Whale Shark': {
-                image_link: 'images/whale_shark2.jpg',
-                sharks_description: 'The largest fish in the world is the graceful, harmless whale shark. Though they reach the size of a school bus, whale sharks eat tiny plankton and fish eggs, which they filter feed as they swim slowly along with their giant mouths wide open. They are one of only three species of filter feeding sharks.',
+            'Goblin Shark': {
+                image_link: 'images/goblin_shark2.jpg',
+                sharks_description: 'The goblin shark is one of the creepier fish out there! It has a long, prominent snout covered with special sensing organs (ampullae of Lorenzini) that help it to sense electric fields in the deep, dark water it calls home.',
             },
         }
 
@@ -82,8 +82,8 @@ class SharkMatchGame {
     }
 
     cardClicked(card) {
-        if (!this.waitForTimeout && $(card.cardInner).children().length === 2) {
-            $(card.cardInner).addClass('card-flip');
+        if (!this.waitForTimeout && $(card.cardContainer).children().length === 2) {
+            $(card.cardContainer).addClass('card-flip');
             //////////SELECT FIRST CARD CLICKED//////////
             if (this.firstCardClicked === null) {
                 this.firstCardClicked = card;
@@ -135,8 +135,8 @@ class SharkMatchGame {
         this.stats.accuracy = (this.stats.matches / this.stats.attempts * 100).toFixed(2) + '%';
         this.waitForTimeout = true;
         setTimeout(function () {
-            $(this.firstCardClicked.cardInner).removeClass('card-flip');
-            $(this.secondCardClicked.cardInner).removeClass('card-flip');
+            $(this.firstCardClicked.cardContainer).removeClass('card-flip');
+            $(this.secondCardClicked.cardContainer).removeClass('card-flip');
             this.firstCardClicked = null;
             this.secondCardClicked = null;
             this.waitForTimeout = false;
