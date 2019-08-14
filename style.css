@@ -4,7 +4,7 @@ body {
     height: 100vh;
     font-family: 'Work Sans', sans-serif;
     background-color: #045de9;
-    background-image: linear-gradient(315deg,#07419f 50%, #090965 50%);
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
 
 .fa {
@@ -16,7 +16,7 @@ body {
 /* MAIN GAME AREA */
 .main {
     text-align: center;
-    background-image: url('images/background.jpg');
+    background-image: url('images/4k_shark_atlantic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,13 +44,13 @@ body {
 .play-button {
     cursor: pointer;
     text-shadow: 0.15vw 0.15vw rgba(0, 55, 214, 0.67);
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-size: 2.2rem;
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     color: white;
     background-color: #045de9;
-    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    background-image: linear-gradient(315deg, #044660 0%, #0896A0 74%);
     padding: 0.3% 1.5% 0.3% 1.5%;
 }
 
@@ -60,7 +60,7 @@ body {
 
 .game-title {
     margin-top: 5%;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 1px 1px 1px #000,
         3px 3px 5px blue;
@@ -252,7 +252,7 @@ body {
     font-size: 50px;
     cursor: pointer;
     position: absolute;
-    color: rgba(255, 215, 0, 0.8);
+    color: #b2a59f;
 }
 
 .start-modal .fa-close:hover,
@@ -421,7 +421,7 @@ body {
     border-radius: 5px;
     background-color: #045de9;
     background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
-    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 10px #000000;
 }
 
 
@@ -452,6 +452,8 @@ body {
     height: 20%;
     margin: 5px auto;
     display: inline-block;
+    box-shadow: inset 0 0 10px #000000;
+
 }
 
 .statistics .accuracy {
@@ -475,6 +477,7 @@ body {
     top: 0;
     font-size: 1rem;
     margin-top: 5%;
+    margin-right: 5%;
     font-weight: bold;
 }
 
