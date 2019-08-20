@@ -55,7 +55,7 @@ body {
 }
 
 .play-button:hover {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
 }
 
 .game-title {
@@ -96,7 +96,7 @@ body {
 }
 
 .modal-content {
-    background-image: url('images/background.jpg'), linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    background-image: url('images/4k_shark_atlantic.jpg'), linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
@@ -294,7 +294,7 @@ body {
     /* border: 5px solid rgb(255, 215, 0); */
     box-shadow: inset 0 0 10px #000000;
     box-sizing: border-box;
-    background-image: url('images/background.jpg');
+    background-image: url('images/4k_shark_atlantic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -487,7 +487,7 @@ body {
 }
 
 .description {
-    height: 35%;
+    height: 46%;
     margin: 0 auto;
     position: relative;
 }
@@ -641,7 +641,7 @@ body {
     }
 
     .play-button {
-        font-size: 2.0rem;
+        font-size: 1.0rem;
     }
 
     .start-modal .fa-question {
@@ -697,7 +697,7 @@ body {
     }
 
     .play-button {
-        font-size: 1.8rem;
+        font-size: 0.8rem;
     }
 
     .game-title h1 {
