@@ -516,7 +516,7 @@ body {
 @media only screen and (max-width: 1200px) {
 
     .description .fun-fact {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
 
     .game-header {
