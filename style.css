@@ -3,8 +3,11 @@ body {
     font-size: 0;
     height: 100vh;
     font-family: 'Work Sans', sans-serif;
-    background-color: #045de9;
-    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    background-color: black;
+    /* background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa {
@@ -41,7 +44,40 @@ body {
     margin-top: 8vh;
 }
 
-.play-button {
+/* LIQUID BUTTON */
+.btn-liquid {
+	display: inline-block;
+	position: relative;
+	width: 240px;
+	height: 60px;
+
+	border-radius: 27px;
+
+	color: #fff;
+	font: 700 14px/60px "Droid Sans", sans-serif;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-liquid .inner {
+	position: relative;
+
+	z-index: 2;
+}
+
+.btn-liquid canvas {
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	bottom: -50px;
+	left: -50px;
+
+	z-index: 1;
+}
+
+/* .play-button {
     cursor: pointer;
     text-shadow: 0.15vw 0.15vw rgba(0, 55, 214, 0.67);
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
@@ -56,7 +92,7 @@ body {
 
 .play-button:hover {
     font-size: 2.0rem;
-}
+} */
 
 .game-title {
     margin-top: 5%;
@@ -119,7 +155,7 @@ body {
 }
 
 .play-again-button button {
-    background-image: url('images/'), linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    /* background-image: url('images/'), linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%); */
     border-radius: 4px;
     cursor: pointer;
 }
@@ -235,8 +271,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #045de9;
-    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    background-color: black;
+    /* background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%); */
 }
 
 .start-modal .fa-question {
@@ -415,12 +451,16 @@ body {
 }
 
 .attempts,
-.accuracy,
+.accuracy {
+    border-radius: 5px;
+
+}
+
 .description {
     /* border: 2px solid rgba(255, 215, 0, 0.7); */
     border-radius: 5px;
-    background-color: #045de9;
-    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    /* background-color: #045de9; */
+    /* background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%); */
     box-shadow: inset 0 0 10px #000000;
 }
 
@@ -710,7 +750,7 @@ body {
 
     .start-modal .game-and-stats {
         height: 85vh;
-        width: 50vh;
+        width: 52vh;
     }
 
     .start-modal .game-area {
