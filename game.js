@@ -59,7 +59,7 @@ class SharkMatchGame {
         $('.play-again-button').on('click', this.resetButtonClicked);
         $('.play-again-button').on('click', this.hideModal);
         $('.fa-close').on('click', this.hideModal);
-        $('.play-button').on('click', this.displayGame);
+        $('.button').on('click', this.displayGame);
         $('.start-modal .fa-close').on('click', this.hideModal);
         $('.fa-question').on('click', this.openHelpModal);
     }
@@ -158,7 +158,7 @@ class SharkMatchGame {
 
     //////////DISPLAY GAME//////////
     displayGame() {
-        $('.start-modal').fadeIn();
+        $('.start-modal').fadeIn(2000);
     }
 
     closeGameModal() {
@@ -196,16 +196,6 @@ class SharkMatchGame {
     //////////DISPLAY HELP MODAL//////////
     openHelpModal() {
         $('.help-modal').fadeIn();
-    }
-
-    clickHandlers() {
-        $('.reset-button').on('click', this.resetButtonClicked);
-        $('.play-again-button').on('click', this.resetButtonClicked);
-        $('.play-again-button').on('click', this.hideModal);
-        $('.fa-close').on('click', this.hideModal);
-        $('.play-button').on('click', this.displayGame);
-        $('.start-modal .fa-close').on('click', this.hideModal);
-        $('.fa-question').on('click', this.openHelpModal);
     }
 
 }
