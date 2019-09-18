@@ -23,7 +23,7 @@ class SharkCard {
         this.cardFront = $('<div>', {
             'class': 'front',
             'css': {
-                'background-image': 'url(' + this.randomImageLink + '),  linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)',
+                'background-image': 'url(' + this.randomImageLink + ')',
             },
         })
 
