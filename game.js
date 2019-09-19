@@ -84,17 +84,14 @@ class SharkMatchGame {
     cardClicked(card) {
         if (!this.waitForTimeout && $(card.cardContainer).children().length === 2) {
             $(card.cardContainer).addClass('card-flip');
-            //////////SELECT FIRST CARD CLICKED//////////
             if (this.firstCardClicked === null) {
                 this.firstCardClicked = card;
             }
 
-            //////////SELECT SECOND CARD CLICKED//////////
             else if ($(this.firstCardClicked.domElement).index() !== $(card.domElement).index()) {
                 this.secondCardClicked = card;
                 this.stats.attempts++;
 
-                //////////CHECK MATCHED CARDS//////////
                 if (this.firstCardClicked.randomImageLink === this.secondCardClicked.randomImageLink) {
                     this.cardsMatch();
                 } else {
@@ -156,7 +153,6 @@ class SharkMatchGame {
         this.createCards();
     }
 
-    //////////DISPLAY GAME//////////
     displayGame() {
         $('.start-modal').fadeIn(2000);
     }
@@ -167,7 +163,6 @@ class SharkMatchGame {
     }
 
 
-    //////////DISPLAY AND HIDE GAME OVER MODAL///////////
     showModal() {
         this.stats.setNewHighScore();
         $('.attempts-after-win').text('You had ' + this.stats.attempts + ' attempts');
@@ -193,7 +188,6 @@ class SharkMatchGame {
         }
     }
 
-    //////////DISPLAY HELP MODAL//////////
     openHelpModal() {
         $('.help-modal').fadeIn();
     }
