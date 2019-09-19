@@ -1,17 +1,25 @@
-# Memory Match
+# <a href="https://sharkhunt.alicele.dev" target="_blank">Shark Hunt </a>
 
-## Overview
+Card matching memorization game in Shark theme.
 
-> Memory match is a game with 18 cards face down and the player has to try and match all 9 pairs of matching cards by remembering the position of the cards.
-Once the player has match 2 cards they will be displayed face up until all pairs have been matched. Once all pairs have been matched the user will be
-displayed a message that they have won the game. As the user clicks through the cards stats will be kept letting the user know how many attempts and the
-accuracy of their choices.
+Click on the title above to visit the live site.
 
-> <a href="https://docs.google.com/presentation/d/1zlSHYatpaPsrq4LuOtyuE-RRIom4vRo-lXovQ0zPV0U/pub?start=false&loop=false&delayms=3000" target="_blank">Design Overview</a>
+### Tools and Technologies
+- Application build in object-oriented programming concept. Focus on clickevent logic.
+- Technologies used:
+    - JavaScript
+    - jQuery
+    - HTML5
+    - CSS3
+- Tools used:
+    - GitHub
+    - Git
+    - Visual Studio Code
 
-> <a href="https://drive.google.com/open?id=0B3R9g7F9YRS6SHd3Q3lRdWF0RkU" target="_blank">Flow Document</a>
-
-> ### Versions
-> - Version 1.0 (v1.0) - <a href="https://github.com/Learning-Fuze/memory_match/tree/version1.0">View Details</a>
-> - Version 0.5 (v0.5) - <a href="https://github.com/Learning-Fuze/memory_match/tree/version0.5">View Details</a>
-> - Version 0.1 (v0.1) - <a href="https://github.com/Learning-Fuze/memory_match/tree/version0.1">View Details</a>
+### Setup Instructions
+This repo is built with JavaScript with jQuery. Follow the below setup instructions to get started.
+1. Fork this repo
+2. Clone your forked copy of this repo
+  - `git clone https://github.com/[your_username]/memory_match_game.git`
+3. Change directory into the newly cloned repo
+  - navigate to the application folder `cd memory_match_game`
