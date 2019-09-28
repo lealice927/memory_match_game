@@ -32,11 +32,16 @@ class Stats {
 
     displayStats() {
         $('.attempts .value').text(this.attempts);
-
         if (this.accuracy === 'NaN%') {
             this.accuracy = '0.00%';
         }
         $('.accuracy .value').text(this.accuracy);
+    }
+
+    setNewHighScore() {
+        if (localStorage.highestAccuracy !== undefined || this.highestAccuracy !== 0) {
+            this.highestAccuracy = JSON.parse(localStorage.highestAccuracy);
+        }
     }
 
     resetStats() {
@@ -44,12 +49,6 @@ class Stats {
         this.attempts = 0;
         this.matches = 0;
         this.displayStats();
-    }
-
-    setNewHighScore() {
-        if (localStorage.highestAccuracy !== undefined || this.highestAccuracy !== 0) {
-            this.highestAccuracy = JSON.parse(localStorage.highestAccuracy);
-        }
     }
 
 }
