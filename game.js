@@ -14,12 +14,12 @@ class SharkMatchGame {
                 sharks_description: 'The largest predatory fish in the world – capable of eating marine mammals that weight several hundred pounds – is the great white shark. The only two fishes that grow larger than Great Whites are the whale shark and the basking shark, both filter feeders that eat plankton.',
             },
             'Great Hammerhead Shark': {
-                image_link: 'images/hammerhead_shark2.jpg',
+                image_link: 'images/hammerhead_shark.jpg',
                 sharks_description: 'Hammerheads are aggressive hunters, feeding on smaller fish, octopuses, squid, and crustaceans. They do not actively seek out human prey, but are very defensive and will attack when provoked.',
                 source: '',
             },
             'Bull Shark': {
-                image_link: 'images/bull_shark3.jpg',
+                image_link: 'images/bull_shark.jpg',
                 sharks_description: 'The bull shark is a predatory species that lives in coastal seas and is the shark with the best ability to move into freshwaters – particularly large, coastal rivers and lakes. They are able to move back and forth between saltwater and freshwater with ease. This behavior brings them into more contact with humans than most species of sharks, and they are therefore responsible for fatally biting more people than any other species.',
             },
             'Tiger Shark': {
@@ -31,7 +31,7 @@ class SharkMatchGame {
                 sharks_description: 'Blue sharks are curious, open-ocean predators that live throughout the global ocean, from the tropics to cold temperate waters. They spend most of their lives far from the coast and are truly a pelagic species. The common name comes from the blue color of the skin, unique among the sharks.',
             },
             'Shortfin Mako Shark': {
-                image_link: 'images/shortfin_mako_shark3.jpg',
+                image_link: 'images/shortfin_mako_shark.jpg',
                 sharks_description: 'The shortfin mako shark, also known as the blue pointer or bonito shark, is a large mackerel shark. It is commonly referred to as the mako shark, as is the longfin mako shark. The shortfin mako is on record as the fastest-swimming shark, capable of bursts of speed up to 18.8 metres per second.',
             },
             'Thresher Shark': {
