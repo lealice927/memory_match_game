@@ -31,6 +31,7 @@ h1 {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    backface-visibility: hidden;
     box-sizing: border-box;
     overflow: auto;
 }
@@ -404,6 +405,7 @@ a {
     background-position: cover;
     border: 1px black solid;
     transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 
 /* STATS */
